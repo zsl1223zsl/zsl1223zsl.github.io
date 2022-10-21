@@ -6,7 +6,7 @@
   <link href="https://zsl1223zsl.github.io/atom.xml" rel="self"/>
   
   <link href="https://zsl1223zsl.github.io/"/>
-  <updated>2022-10-12T13:57:43.780Z</updated>
+  <updated>2022-10-19T04:45:39.552Z</updated>
   <id>https://zsl1223zsl.github.io/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>电路基础</title>
+    <link href="https://zsl1223zsl.github.io/2022/10/18/%E7%94%B5%E8%B7%AF/"/>
+    <id>https://zsl1223zsl.github.io/2022/10/18/%E7%94%B5%E8%B7%AF/</id>
+    <published>2022-10-18T13:28:17.389Z</published>
+    <updated>2022-10-19T04:45:39.552Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Chapter1"><a href="#Chapter1" class="headerlink" title="Chapter1"></a><strong>Chapter1</strong></h1><h3 id="齐次定理"><a href="#齐次定理" class="headerlink" title="齐次定理"></a>齐次定理</h3><ul><li>对于具有<em>唯一解</em> 的线性电路，当只有一个激励源（独立电压源或独立电流源）作用的时候，其响应（电路任意处的电压或电流）与激励成正比。<img height="300" src="/2022/10/18/%E7%94%B5%E8%B7%AF/齐次定理.png" width="400" style="text-align: center"></li></ul><h3 id="叠加定理"><a href="#叠加定理" class="headerlink" title="叠加定理"></a>叠加定理</h3><h3 id="替代定理"><a href="#替代定理" class="headerlink" title="替代定理"></a>替代定理</h3><h3 id="戴维宁等效"><a href="#戴维宁等效" class="headerlink" title="戴维宁等效"></a>戴维宁等效</h3><h3 id="最大功率传输条件"><a href="#最大功率传输条件" class="headerlink" title="最大功率传输条件"></a>最大功率传输条件</h3><h1 id="Chapter2"><a href="#Chapter2" class="headerlink" title="Chapter2"></a><strong>Chapter2</strong></h1><h3 id="电容"><a href="#电容" class="headerlink" title="电容"></a>电容</h3><h3 id="电感"><a href="#电感" class="headerlink" title="电感"></a>电感</h3><h3 id="全响应公式"><a href="#全响应公式" class="headerlink" title="全响应公式"></a>全响应公式</h3><h1 id="Chapter3"><a href="#Chapter3" class="headerlink" title="Chapter3"></a><strong>Chapter3</strong></h1><h3 id="相量"><a href="#相量" class="headerlink" title="相量"></a>相量</h3><h3 id="阻抗"><a href="#阻抗" class="headerlink" title="阻抗"></a>阻抗</h3><h3 id="功率"><a href="#功率" class="headerlink" title="功率"></a>功率</h3><h4 id="有功功率"><a href="#有功功率" class="headerlink" title="有功功率"></a>有功功率</h4><h4 id="无功功率"><a href="#无功功率" class="headerlink" title="无功功率"></a>无功功率</h4><h4 id="复功率"><a href="#复功率" class="headerlink" title="复功率"></a>复功率</h4><h4 id="最大功率传输条件-1"><a href="#最大功率传输条件-1" class="headerlink" title="最大功率传输条件"></a>最大功率传输条件</h4><h3 id="互感耦合电路"><a href="#互感耦合电路" class="headerlink" title="互感耦合电路"></a>互感耦合电路</h3><h4 id="耦合电感"><a href="#耦合电感" class="headerlink" title="耦合电感"></a>耦合电感</h4><h4 id="T型去耦等效"><a href="#T型去耦等效" class="headerlink" title="T型去耦等效"></a>T型去耦等效</h4><h4 id="变压器"><a href="#变压器" class="headerlink" title="变压器"></a>变压器</h4><h4 id="理想变压器"><a href="#理想变压器" class="headerlink" title="理想变压器"></a>理想变压器</h4><h1 id="Chapter4"><a href="#Chapter4" class="headerlink" title="Chapter4"></a><strong>Chapter4</strong></h1><h3 id="频率响应与网络函数"><a href="#频率响应与网络函数" class="headerlink" title="频率响应与网络函数"></a>频率响应与网络函数</h3><h3 id="一阶电路的频率响应"><a href="#一阶电路的频率响应" class="headerlink" title="一阶电路的频率响应"></a>一阶电路的频率响应</h3><h3 id="串联谐振电路"><a href="#串联谐振电路" class="headerlink" title="串联谐振电路"></a>串联谐振电路</h3><h4 id="RLC串联谐振"><a href="#RLC串联谐振" class="headerlink" title="RLC串联谐振"></a>RLC串联谐振</h4><h4 id="品质因数"><a href="#品质因数" class="headerlink" title="品质因数"></a>品质因数</h4><h4 id="频率响应"><a href="#频率响应" class="headerlink" title="频率响应"></a>频率响应</h4><h3 id="并联谐振电路"><a href="#并联谐振电路" class="headerlink" title="并联谐振电路"></a>并联谐振电路</h3><h4 id="GCL殡殓谐振"><a href="#GCL殡殓谐振" class="headerlink" title="GCL殡殓谐振"></a>GCL殡殓谐振</h4><h4 id="简单的并联谐振电路"><a href="#简单的并联谐振电路" class="headerlink" title="简单的并联谐振电路"></a>简单的并联谐振电路</h4><h4 id="复杂的并联谐振电路"><a href="#复杂的并联谐振电路" class="headerlink" title="复杂的并联谐振电路"></a>复杂的并联谐振电路</h4>]]></content>
+    
+    
+    <summary type="html">电路基础知识要点</summary>
+    
+    
+    
+    <category term="课程" scheme="https://zsl1223zsl.github.io/categories/%E8%AF%BE%E7%A8%8B/"/>
+    
+    
+    <category term="电路" scheme="https://zsl1223zsl.github.io/tags/%E7%94%B5%E8%B7%AF/"/>
+    
+  </entry>
   
   <entry>
     <title>初识链表</title>

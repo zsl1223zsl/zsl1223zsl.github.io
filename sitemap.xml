@@ -74,13 +74,6 @@
 
   
   <url>
-    <loc>https://zsl1223zsl.github.io/tags/%E7%94%B5%E8%B7%AF/</loc>
-    <lastmod>2022-10-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://zsl1223zsl.github.io/tags/C/</loc>
     <lastmod>2022-10-25</lastmod>
     <changefreq>weekly</changefreq>
@@ -94,17 +87,24 @@
     <priority>0.2</priority>
   </url>
   
+  <url>
+    <loc>https://zsl1223zsl.github.io/tags/%E7%94%B5%E8%B7%AF/</loc>
+    <lastmod>2022-10-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
 
   
   <url>
-    <loc>https://zsl1223zsl.github.io/categories/%E8%AF%BE%E7%A8%8B/</loc>
+    <loc>https://zsl1223zsl.github.io/categories/C/</loc>
     <lastmod>2022-10-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://zsl1223zsl.github.io/categories/C/</loc>
+    <loc>https://zsl1223zsl.github.io/categories/%E8%AF%BE%E7%A8%8B/</loc>
     <lastmod>2022-10-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

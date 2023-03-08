@@ -1,0 +1,375 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>555芯片 | zsl’s blog</title><meta name="keywords" content="555-chip"><meta name="author" content="ZSL"><meta name="copyright" content="ZSL"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="写在前面的： 转眼已经大二了，上完了电路，回想起高中学习的555，在此记录，缅怀逝去的高中时光。  0.前言555定时器于1971年由西格尼蒂克公司推出，由于其易用性、低廉的价格和良好的可靠性，被广泛应用于电子电路的设计中。 ​                                                                            ————百度百科 常">
+<meta property="og:type" content="article">
+<meta property="og:title" content="555芯片">
+<meta property="og:url" content="https://zsl1223zsl.github.io/2022/11/13/555%E8%8A%AF%E7%89%87/index.html">
+<meta property="og:site_name" content="zsl’s blog">
+<meta property="og:description" content="写在前面的： 转眼已经大二了，上完了电路，回想起高中学习的555，在此记录，缅怀逝去的高中时光。  0.前言555定时器于1971年由西格尼蒂克公司推出，由于其易用性、低廉的价格和良好的可靠性，被广泛应用于电子电路的设计中。 ​                                                                            ————百度百科 常">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://zsl1223zsl.github.io/img/cover.jpg">
+<meta property="article:published_time" content="2022-11-13T06:13:34.000Z">
+<meta property="article:modified_time" content="2023-01-08T11:36:56.499Z">
+<meta property="article:author" content="ZSL">
+<meta property="article:tag" content="555-chip">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://zsl1223zsl.github.io/img/cover.jpg"><link rel="shortcut icon" href="/./img/eye.webp"><link rel="canonical" href="https://zsl1223zsl.github.io/2022/11/13/555%E8%8A%AF%E7%89%87/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":1000},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: true,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#1f1f1f","position":"top-right"},
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '555芯片',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2023-01-08 19:36:56'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link rel="stylesheet" href="/css/mycss.css"><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="zsl’s blog" type="application/atom+xml">
+</head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><script>const preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+
+  }
+}
+window.addEventListener('load',()=> { preloader.endLoading() })
+
+if (false) {
+  document.addEventListener('pjax:send', () => { preloader.initLoading() })
+  document.addEventListener('pjax:complete', () => { preloader.endLoading() })
+}</script><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/./img/eye.webp" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">14</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">11</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">7</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></li><li><a class="site-page child" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></li></ul></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/./img/cover.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">zsl’s blog</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></li><li><a class="site-page child" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></li></ul></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">555芯片</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-11-13T06:13:34.000Z" title="发表于 2022-11-13 14:13:34">2022-11-13</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-01-08T11:36:56.499Z" title="更新于 2023-01-08 19:36:56">2023-01-08</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/chip/">chip</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">1k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>3分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="555芯片"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p>写在前面的：</p>
+<p>转眼已经大二了，上完了电路，回想起高中学习的555，在此记录，缅怀逝去的高中时光。</p>
+<hr>
+<h2 id="0-前言"><a href="#0-前言" class="headerlink" title="0.前言"></a>0.前言</h2><p>555定时器于1971年由西格尼蒂克公司推出，由于其易用性、低廉的价格和良好的可靠性，被广泛应用于电子电路的设计中。</p>
+<p>​                                                                            ————百度百科</p>
+<p>常用的555芯片（DIP-8封装）：</p>
+<img src="/2022/11/13/555%E8%8A%AF%E7%89%87/image-20221113215104261.png" class title="image-20221113215104261">
+<p>其内部电路如图所示：</p>
+<img src="/2022/11/13/555%E8%8A%AF%E7%89%87/image-20221113215023933.png" class title="555电路原理图">
+<ul>
+<li>其中有三个5k电阻串联而成的分压电路（有人说这就是555芯片名称的来源）</li>
+</ul>
+<h2 id="1-原理介绍"><a href="#1-原理介绍" class="headerlink" title="1.原理介绍"></a>1.原理介绍</h2><p>555芯片的真值表如下图所示：</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>引脚</th>
+<th>功能</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>GND</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td>TRIG</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td>OUT</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>4</td>
+<td>RST</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>5</td>
+<td>CTRL</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>6</td>
+<td>THR</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>7</td>
+<td>DIS</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>8</td>
+<td>V+</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>RESET</th>
+<th>THR(6脚高触发端)</th>
+<th>TRIG(2脚低触发端)</th>
+<th>OUT(3脚输出端)</th>
+<th>DIS(7脚)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>x</td>
+<td>x</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td>1</td>
+<td>0($&lt;\frac{2}{3}V_{cc}$)</td>
+<td>0($&lt;\frac{1}{3}V_{cc}$)</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td>1</td>
+<td>1($&gt;\frac{2}{3}V_{cc}$)</td>
+<td>0($&lt;\frac{1}{3}V_{cc}$)</td>
+<td>禁用</td>
+<td></td>
+</tr>
+<tr>
+<td>1</td>
+<td>0($&lt;\frac{2}{3}V_{cc}$)</td>
+<td>1($&gt;\frac{1}{3}V_{cc}$)</td>
+<td>保持</td>
+<td></td>
+</tr>
+<tr>
+<td>1</td>
+<td>1($&gt;\frac{2}{3}V_{cc}$)</td>
+<td>1($&gt;\frac{1}{3}V_{cc}$)</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="2-应用电路"><a href="#2-应用电路" class="headerlink" title="2.应用电路"></a>2.应用电路</h2><ol>
+<li><h3 id="方波发生电路"><a href="#方波发生电路" class="headerlink" title="方波发生电路"></a>方波发生电路</h3><img src="/2022/11/13/555%E8%8A%AF%E7%89%87/image-20221201210728072.png" class title="image-20221201210728072">
+</li>
+</ol>
+<p>   电路分析：</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>$voltage\rightarrow$</th>
+<th>0</th>
+<th>$\frac{1}{3}V_{cc}$</th>
+<th>$\frac{2}{3}V_{cc}$</th>
+<th>$\frac{1}{3}V_{cc}$</th>
+<th>0</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>6</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>2</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr>
+<td>3</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td>7</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>   其流程为：开始时，2、6脚电压为0，3脚输出高电平，同时，内部三极管截止。此后，电容充电，使得2、6脚的电压逐渐升高，当2、6脚的电压在$\frac{1}{3}V_{cc}和\frac{2}{3}V_{cc}$之间时，保持原有状态，即3脚输出高电平，内部三极管截止。当2、6脚的电压大于$\frac{2}{3}V_{cc}$时，3脚置0，同时三极管导通，电容C和$R_B$通过三极管链接到地，形成放电回路，使得2、6脚的电压下降。</p>
+<p>   根据电路基础里面动态电路章节的知识(相当于解一个一阶的微分方程，高中讲到这里莫名其妙蹦出来的一个<strong>0.7(ln2)</strong>整的我有点头疼，直到大二学了电路。。。)，我们可以得到以下两个式子：</p>
+<p>   $t_H=(R_A+R_B)Cln2$</p>
+<p>   $t_L=R_BCln2$</p>
+<p>   其中$t_H指的是电路输出高电平持续的时间，t_L指的则是电路低电平持续的时间$</p>
+<p>   那么接下来生成一个我们想要的方波就很简单啦（￣︶￣）↗　</p>
+<p>   方波的周期：$T=t_A+t_B=(R_A+2R_B)Cln2$</p>
+<p>   方波的占空比：$duty=\frac{t_H}{T}=\frac{R_A+R_B}{R_A+2R_B}$</p>
+<p>   实物搭建：</p>
+<p>   简单出道题目：使用NE555搭建一个方波发生电路，要求：频率10kHz，占空比50%。</p>
+<p>   上述电路的问题是占空比不能低于50%，为了使方波的占空比能接近50%，我们需要尽量使$R_A&lt;&lt;R_B$,我们通过上述公式确定电路的参数为：$R_A=100,R_B=10K,C=0.01uF(其中R_B是电位器用于之后硬件调节方波至10KHz)$</p>
+<p>   电路仿真：</p>
+   <img src="/2022/11/13/555%E8%8A%AF%E7%89%87/image-20221205202656724.png" class title="image-20221205202656724">
+<p>   实物展示：</p>
+   <img src="/2022/11/13/555%E8%8A%AF%E7%89%87/image-20221205212901711.png" class title="image-20221205212901711">
+   <img src="/2022/11/13/555%E8%8A%AF%E7%89%87/image-20221205212914559.png" class title="image-20221205212914559">
+<p>   洞洞板含贴片元件可以极大的节省空间(～￣▽￣)～</p>
+<p>   理论很完美，现实很骨感(ノへ￣、)</p>
+<p>   测试环节：经过实际测试，上述电路不会生成10kHz的正弦波，其原因经过一步步的排查，初步认定为电路设计的不合理。实际测试上述电路有以下几个现象：</p>
+<ol>
+<li>电路的输入阻抗很小，芯片发热严重</li>
+<li>在5v供电的情况下，2、6脚的电压在2.3v左右，并且一直没有变化</li>
+<li>输出一直是0v</li>
+</ol>
+<p>   对此为了解决以上问题，在网络上查找了一个电路进行仿真加上实验洞洞板测试，其原理和之前分析的差不多，主要是引入了两个二极管来改变充电回路和放电回路充电时间的不同。其原理图如下图所示：</p>
+   <img src="/2022/11/13/555%E8%8A%AF%E7%89%87/image-20221207204226629.png" class title="image-20221207204226629">
+<p>   实际面包板搭建的电路如下：</p>
+   <img src="/2022/11/13/555%E8%8A%AF%E7%89%87/image-20221207204514842.png" class title="image-20221207204514842">
+<p>   经过调整电位器，可以把输出的频率调到1kHz。</p>
+<p>   至此暂告一段落…( ＿ ＿)ノ｜（<del>该去复习了，虽然期末推迟到了下个学期</del>）</p>
+<ol>
+<li></li>
+</ol>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="https://zsl1223zsl.github.io">ZSL</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://zsl1223zsl.github.io/2022/11/13/555%E8%8A%AF%E7%89%87/">https://zsl1223zsl.github.io/2022/11/13/555%E8%8A%AF%E7%89%87/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://zsl1223zsl.github.io" target="_blank">zsl’s blog</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/555-chip/">555-chip</a></div><div class="post_share"><div class="social-share" data-image="/./img/cover.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2022/12/09/%E6%A6%82%E7%8E%87%E8%AE%BA/"><img class="prev-cover" src="/./img/cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">概率论</div></div></a></div><div class="next-post pull-right"><a href="/2022/11/09/%E9%AB%98%E6%95%B0/"><img class="next-cover" src="/./img/cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">高数</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/./img/eye.webp" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">ZSL</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">14</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">11</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">7</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">Welcome to zsl's blog~</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#0-%E5%89%8D%E8%A8%80"><span class="toc-number">1.</span> <span class="toc-text">0.前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E5%8E%9F%E7%90%86%E4%BB%8B%E7%BB%8D"><span class="toc-number">2.</span> <span class="toc-text">1.原理介绍</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E5%BA%94%E7%94%A8%E7%94%B5%E8%B7%AF"><span class="toc-number">3.</span> <span class="toc-text">2.应用电路</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%B9%E6%B3%A2%E5%8F%91%E7%94%9F%E7%94%B5%E8%B7%AF"><span class="toc-number">3.1.</span> <span class="toc-text">方波发生电路</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2023/02/14/%E4%BF%A1%E5%8F%B7%E4%B8%8E%E7%B3%BB%E7%BB%9F/" title="信号与系统"><img src="/./img/cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="信号与系统"/></a><div class="content"><a class="title" href="/2023/02/14/%E4%BF%A1%E5%8F%B7%E4%B8%8E%E7%B3%BB%E7%BB%9F/" title="信号与系统">信号与系统</a><time datetime="2023-02-14T13:28:55.000Z" title="发表于 2023-02-14 21:28:55">2023-02-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/02/01/USB-Blaster/" title="USB_Blaster"><img src="/./img/cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="USB_Blaster"/></a><div class="content"><a class="title" href="/2023/02/01/USB-Blaster/" title="USB_Blaster">USB_Blaster</a><time datetime="2023-02-01T07:00:27.000Z" title="发表于 2023-02-01 15:00:27">2023-02-01</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/01/11/stm32gui/" title="stm32gui"><img src="/./img/cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="stm32gui"/></a><div class="content"><a class="title" href="/2023/01/11/stm32gui/" title="stm32gui">stm32gui</a><time datetime="2023-01-11T15:49:31.000Z" title="发表于 2023-01-11 23:49:31">2023-01-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/01/08/latex%E5%AE%89%E8%A3%85/" title="latex安装"><img src="/./img/cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="latex安装"/></a><div class="content"><a class="title" href="/2023/01/08/latex%E5%AE%89%E8%A3%85/" title="latex安装">latex安装</a><time datetime="2023-01-08T12:18:46.000Z" title="发表于 2023-01-08 20:18:46">2023-01-08</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/01/08/linux%E8%A3%85%E6%9C%BA/" title="linux装机"><img src="/./img/cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="linux装机"/></a><div class="content"><a class="title" href="/2023/01/08/linux%E8%A3%85%E6%9C%BA/" title="linux装机">linux装机</a><time datetime="2023-01-08T11:35:28.000Z" title="发表于 2023-01-08 19:35:28">2023-01-08</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('/./img/cover.jpg')"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By ZSL</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><div class="js-pjax"></div><script id="canvas_nest" defer="defer" color="0,0,255" opacity="0.7" zIndex="-1" count="99" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-nest.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/metingjs/dist/Meting.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
